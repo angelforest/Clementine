@@ -258,11 +258,10 @@ void QtSystemTrayIcon::SetNowPlaying(const Song& song,
     QString final_path =
         image_path.startsWith("file://") ? image_path.mid(7) : image_path;
     clone.replace("%image",
-                  "    <td>"
-                  "      <img src=\"" %
+                  "<img src=\"" %
                       final_path %
                       "\" />"
-                      "    </td>");
+                      "<br/>");
   } else {
     clone.replace("%image", "");
   }
